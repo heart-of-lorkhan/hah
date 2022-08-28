@@ -1,0 +1,66 @@
+.header {
+  > * {
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
+
+  .container {
+    max-width: none;
+    padding: 0;
+  }
+}
+
+.header__inner {
+  padding: 14px 0;
+  background-color: $primary-bckg;
+
+  @include tablet {
+    padding: 14px;
+    box-shadow: 0 3px 6px $header-box-shadow;
+  }
+
+  @include desktop {
+    padding: 44px 200px 22px 216px;
+    margin-left: -22px;
+  }
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @include desktop {
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+}
+
+.header__buttons {
+  display: flex;
+}
+
+.header__logo {
+  margin-right: auto;
+  margin-left: auto;
+
+  img {
+    width: 296px;
+    height: 63px;
+  }
+
+  @include tablet {
+    max-width: 100%;
+    width: 296px;
+    height: 63px;
+    margin: 0 auto;
+    flex-shrink: 0;
+  }
+
+  @include tablet-large {
+    margin: 0;
+  }
+}

@@ -1,0 +1,133 @@
+.button {
+  font-family: "HelveticaNeueCondensedBold", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  padding: 14px 30px;
+  border-radius: 35px;
+  color: $text-color-white;
+  transition: all $transition-duration;
+  background-color: $btn-color;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-color: $btn-color;
+  min-height: 50px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $btn-color !important;
+    border-color: $btn-color;
+    color: $text-color-white;
+    transition: all $transition-duration;
+  }
+}
+
+.button-request {
+  margin-right: 18px;
+}
+
+.button-apply {
+  background-color: $color-blue;
+  color: $text-color-white;
+  padding: 14px 24px;
+  min-width: 200px;
+
+  @include desktop {
+    padding: 14px 42px;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $violet-color !important;
+    color: $text-color-white;
+  }
+}
+
+.header__buttons .button-apply {
+  display: none;
+
+  @include tablet-large {
+    display: block;
+    margin-right: 0;
+    width: 100%;
+  }
+}
+.header__buttons .button-request {
+  display: none;
+  @include tablet-large {
+    display: block;
+    min-width: 224px;
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+}
+
+.hero__buttons {
+  z-index: 10;
+  margin-left: 18px;
+  position: fixed;
+  left: -18px;
+  bottom: 0;
+  width: 100%;
+
+  @include tablet-large {
+    position: relative;
+    top: 6px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    z-index: 1;
+  }
+}
+
+.hero__buttons .button-apply {
+  border-radius: 0;
+  padding: 22px;
+  border-right: $text-color-white 1px solid;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 500;
+
+  @include tablet-large {
+    margin-right: 18px;
+    border-radius: 35px;
+    padding: 14px 42px;
+    width: auto;
+  }
+}
+.hero__buttons .button-request {
+  display: none;
+
+  @include tablet-large {
+    background-color: $violet-color;
+    border-color: $violet-color;
+    display: block;
+    border-radius: 35px;
+  }
+}
+
+.card__buttons .button-apply {
+  border-radius: 35px;
+  @include tablet-large {
+    margin-right: 17px;
+  }
+}
+
+.button-mobile {
+  display: block;
+  border-radius: 0;
+  background-color: $color-blue;
+  color: $text-color-white;
+  padding: 0 62px;
+
+  @include tablet-large {
+    display: none;
+  }
+}
+
+.button-request {
+  background-color: $violet-color;
+  border-color: $violet-color;
+}

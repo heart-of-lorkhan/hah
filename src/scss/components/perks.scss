@@ -1,0 +1,49 @@
+.perks {
+  display: none;
+
+  @include tablet-large {
+    display: block;
+    padding: 62px 0;
+  }
+}
+
+.perks__title {
+  font-weight: 800;
+  font-size: 50px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.perks__text {
+  margin: 0 auto;
+}
+
+.perks__list {
+  text-align: center;
+  list-style: none;
+  padding: 0 72px;
+  margin: 0;
+  line-height: 1.8;
+  font-weight: 900;
+  font-size: 20px;
+}
+
+.perks__item {
+  display: inline;
+}
+
+.perks__item:not(:first-child) {
+  padding-left: 20px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 10px;
+    bottom: 0;
+    width: 2px;
+    height: 1em;
+    border-right: 2px solid $text-color;
+  }
+}
